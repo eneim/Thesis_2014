@@ -1,0 +1,39 @@
+@prefix geo:   <http://lab.ene.im/SIBM/property/geo#> .
+@prefix sibm:  <http://lab.ene.im/SIBM/property#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+<http://lab.ene.im/SIBM/thing/shelterpoint/P20_102395>
+	sibm:address                 "千葉県富里市高野547"^^xsd:string ;
+	sibm:administrativeAreaCode  "12233"^^xsd:int ;
+	sibm:facilityScale           "114"^^xsd:int ;
+	sibm:facilityType            "避難施設"^^xsd:string ;
+	sibm:hazardClassification    [ 
+		sibm:earthquakeHazard    false ;
+		sibm:notSpecified        true ;
+		sibm:other               false ;
+		sibm:tsunamiHazard       false ;
+		sibm:volcanicHazard      false ;
+		sibm:windAndFloodDamage  false
+	] ;
+	sibm:name                    "高野集会所"^^xsd:string ;
+	sibm:seatingCapacity         "-1"^^xsd:int ;
+	geo:geopoint                 [ 
+		geo:latitude    "35.7092377518"^^xsd:double ;
+		geo:longtitude  "140.346932058"^^xsd:double
+	] .
+<http://lab.ene.im/SIBM/person/54b09c4cb8885>
+	a	<http://lab.ene.im/SIBM/thing/usertype/volunteer> ;
+	sibm:profile  [ 
+		sibm:age        "36"^^xsd:string ;
+		sibm:birthday   "1978-07-07"^^xsd:string ;
+		sibm:email      "Yoko.Banba@e6xample.com"^^xsd:string ;
+		sibm:firstName  "陽子"^^xsd:string ;
+		sibm:gender     "Female"^^xsd:string ;
+		sibm:phone      "+8147-580-6051"^^xsd:string ;
+		sibm:surName    "番場"^^xsd:string ;
+		sibm:userID     "54b09c4cb8885"^^xsd:string
+	] ;
+	sibm:stayAt	<http://lab.ene.im/SIBM/thing/shelterpoint/P20_102395> .
+<http://lab.ene.im/SIBM/thing/usertype/volunteer>
+	sibm:accessLevel  "2"^^xsd:int ;
+	sibm:type         "volunteer"^^xsd:string .
