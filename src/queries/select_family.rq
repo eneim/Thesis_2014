@@ -1,0 +1,29 @@
+PREFIX	geo:   <http://lab.ene.im/SIBM/property/geo#>
+PREFIX 	sibm:  <http://lab.ene.im/SIBM/property#>
+PREFIX 	xsd:   <http://www.w3.org/2001/XMLSchema#>
+PREFIX 	rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?Principal ?Child ?Father
+
+WHERE {
+	?x		sibm:profile	[sibm:firstName	?_Principal] .
+    ?x 		sibm:status		<http://lab.ene.im/SIBM/thing/status/serious> .
+    # ?x 		sibm:stayAt   	<http://lab.ene.im/SIBM/thing/shelterpoint/P20_102395> .
+    
+    # clean up the result, remove literal definition
+    BIND( str(?_Principal) as ?Principal)
+    
+    OPTIONAL {
+		?x	sibm:hasChild 	?y .
+		?y	sibm:profile	[sibm:firstName	?_Child]
+		
+		BIND( str(?_Child) as ?Child) 
+    }
+    
+    OPTIONAL {
+		?x	sibm:hasFather 	?z .
+		?z	sibm:profile	[sibm:firstName	?_Father]
+		
+		BIND( str(?_Father) as ?Father)
+    }
+}

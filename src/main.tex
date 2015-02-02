@@ -8,15 +8,46 @@
 \usepackage{gthesis_myown}
 
 \usepackage{amsmath,amsthm,amssymb,ascmac}
+\usepackage{amsfonts}
 \usepackage{fancybox}
 \usepackage{slashbox}
 %\usepackage[dviout]{color,graphics}
-\usepackage{graphicx}
 \usepackage{color}
 \usepackage{psfrag}
 %\usepackage{upgreek}
 \usepackage{bm}
 \usepackage{wrapfig}
+\usepackage{listings}	% source code
+\usepackage{balance}
+\usepackage{txfonts}
+\usepackage[deluxe]{otf}
+\usepackage{array}
+\newcolumntype{$}{>{\global\let\currentrowstyle\relax}}
+\newcolumntype{^}{>{\currentrowstyle}}
+\newcommand{\rowstyle}[1]{\gdef\currentrowstyle{#1}%
+  #1\ignorespaces
+}
+
+\lstset{%
+  language={XML},
+  basicstyle={\small},%
+  identifierstyle={\small},%
+  commentstyle={\small\itshape},%
+  keywordstyle={\small\bfseries},%
+  ndkeywordstyle={\small},%
+  stringstyle={\small\ttfamily},
+  frame={tb},
+  tabsize=4,
+  breaklines=true,
+  columns=[l]{fullflexible},%
+  numbers=left,%
+  xrightmargin=0zw,%
+  xleftmargin=3zw,%
+  numberstyle={\scriptsize},%
+  stepnumber=1,
+  numbersep=1zw,%
+  lineskip=-0.5ex%
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \input{my-macros}
@@ -61,11 +92,13 @@
 \setcounter{page}{1}
 \renewcommand{\thepage}{\arabic{page}}
 \input{introduction}
-\input{body-a}
-\input{body-b}
-\input{body-c}
+\input{body-b}	%　避難場所の使用例
+\input{body-a}	%　前提知識
+\input{body-c}	%　関連研究
+\input{body-d}
+\input{body-e}
 \input{conclusion}
-\input{acknowledgment}
+%\input{acknowledgment}
 \input{reference}
 \input{appendix}
 % ----------------------------------------------------------------------
