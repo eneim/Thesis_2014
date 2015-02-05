@@ -2,38 +2,38 @@
 @prefix sibm:  <http://lab.ene.im/SIBM/property#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
-<http://lab.ene.im/SIBM/thing/shelterpoint/P20_102395>
-	sibm:address                 "千葉県富里市高野547"^^xsd:string ;
-	sibm:administrativeAreaCode  "12233"^^xsd:int ;
-	sibm:facilityScale           "114"^^xsd:int ;
-	sibm:facilityType            "避難施設"^^xsd:string ;
-	sibm:hazardClassification    [ 
-		sibm:earthquakeHazard    false ;
-		sibm:notSpecified        true ;
-		sibm:other               false ;
-		sibm:tsunamiHazard       false ;
-		sibm:volcanicHazard      false ;
-		sibm:windAndFloodDamage  false
-	] ;
-	sibm:name                    "高野集会所"^^xsd:string ;
-	sibm:seatingCapacity         "-1"^^xsd:int ;
-	geo:geopoint                 [ 
-		geo:latitude    "35.7092377518"^^xsd:double ;
-		geo:longtitude  "140.346932058"^^xsd:double
-	] .
-<http://lab.ene.im/SIBM/person/54b09c4cb8885>
-	a	<http://lab.ene.im/SIBM/thing/usertype/volunteer> ;
-	sibm:profile  [ 
-		sibm:age        "36"^^xsd:string ;
-		sibm:birthday   "1978-07-07"^^xsd:string ;
-		sibm:email      "Yoko.Banba@e6xample.com"^^xsd:string ;
-		sibm:firstName  "陽子"^^xsd:string ;
-		sibm:gender     "Female"^^xsd:string ;
-		sibm:phone      "+8147-580-6051"^^xsd:string ;
-		sibm:surName    "番場"^^xsd:string ;
-		sibm:userID     "54b09c4cb8885"^^xsd:string
-	] ;
-	sibm:stayAt	<http://lab.ene.im/SIBM/thing/shelterpoint/P20_102395> .
-<http://lab.ene.im/SIBM/thing/usertype/volunteer>
-	sibm:accessLevel  "2"^^xsd:int ;
-	sibm:type         "volunteer"^^xsd:string .
+<http://lab.ene.im/SIBM/thing/shelterpoint/S5>
+        sibm:address                 "北海道夕張市南部東町76番地"^^xsd:string ;
+        sibm:administrativeAreaCode  "1209"^^xsd:int ;
+        sibm:facilityScale           "-1"^^xsd:int ;
+        sibm:facilityType            "収容避難所"^^xsd:string ;
+        sibm:hazardClassification    [ sibm:earthquakeHazard    false ;
+                                       sibm:notSpecified        false ;
+                                       ...
+                                     ] ;
+        sibm:name                    "南部コミュニティセンター"^^xsd:string ;
+        sibm:seatingCapacity         "400"^^xsd:int ;
+        geo:geopoint                 [ geo:latitude    "43.020741"^^xsd:double ;
+                                       geo:longtitude  "142.08"^^xsd:double
+                                     ] .
+<http://lab.ene.im/SIBM/person/cb6cb515-8415-4466-b24e-741d1e841499>
+        a             <http://lab.ene.im/SIBM/thing/usertype/evacuee> ;
+        sibm:label    <http://lab.ene.im/SIBM/thing/label/Injured3> ;
+        sibm:profile  [ sibm:age        "19"^^xsd:int ;
+                        sibm:birthday   "1996-8-13"^^xsd:string ;
+                        sibm:email      "KgoG_DEr@wSdl.com"^^xsd:string ;
+                        sibm:firstName  "KgoG"^^xsd:string ;
+                        ...
+                      ] ;
+        sibm:stayAt   <http://lab.ene.im/SIBM/thing/shelterpoint/S5> ;
+        sibm:studyAt  <http://lab.ene.im/SIBM/thing/school/sc1043> ;
+        rel:childOf   <http://lab.ene.im/SIBM/person/bff83765-b629-480e-a362-6fefc3f2fca6> , 
+        			　<http://lab.ene.im/SIBM/person/97f7ea59-3f8e-4892-8957-08d93f61522b> .
+<http://lab.ene.im/SIBM/thing/school/sc1043>
+        a                            "大学"^^xsd:string ;
+        sibm:address                 "緑泉町5-14"^^xsd:string ;
+        sibm:administrativeAreaCode  "1216"^^xsd:int ;
+        sibm:name                    "星槎大学"^^xsd:string ;
+        geo:geopoint                 [ geo:latitude    "43.459416"^^xsd:double ;
+                                       geo:longtitude  "142.166334"^^xsd:double
+                                     ] .

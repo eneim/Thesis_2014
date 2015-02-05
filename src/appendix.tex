@@ -1,6 +1,125 @@
 ﻿\appendix
 \chapter{クエリセット}\label{appendix1}
 
-\lstinputlisting[caption=クエリ１,label=q1]{./queries/select_age.rq}
+\section{LUBMを参考したクエリ}
 
-\ref{q1}がお年寄りの問い合わせで検索したクエリである。
+\begin{figure}[h!]
+	\lstinputlisting{./queries/lubm_q1.rq}
+	\caption{LUBMのクエリ１}
+	\label{lubm_q1}
+\end{figure}
+
+\begin{figure}[h!]
+	\lstinputlisting{./queries/lubm_insp_q1.rq}
+	\caption{「sc1」学校で勉強している学生を検索するクエリである。検索クラスは人全体であり、
+	推論情報やデータの階層を持たないクエリである。このクエリが図\ref{lubm_q1}のLUBMのクエリ１を再現する。}
+	\label{sibm_q1}
+\end{figure}
+
+\begin{figure}[h!]
+	\lstinputlisting{./queries/lubm_q2.rq}
+	\caption{LUBMのクエリ２}
+	\label{lubm_q2}
+\end{figure}
+
+\begin{figure}[h!]
+	\lstinputlisting{./queries/lubm_insp_q2.rq}
+	\caption{
+	「小学校」で勉強している学生たちの情報及び避難している場所の情報を検索するクエリである。
+	クエリ１より複雑な検索条件で検索するクエリである。
+	このクエリが図\ref{lubm_q2}のLUBMのクエリ２を再現する。}
+	\label{sibm_q2}
+\end{figure}
+
+\begin{figure}[h!]
+	\lstinputlisting{./queries/lubm_q3.rq}
+	\caption{LUBMのクエリ３}
+	\label{lubm_q3}
+\end{figure}
+
+\begin{figure}[h!]
+	\lstinputlisting{./queries/lubm_insp_q3.rq}
+	\caption{
+	避難場所「S1」にいる人の情報を検索するクエリである。クエリ１と似たようなクエリであるが、
+	避難場所にはさらに複雑なデータ構造を持ち、図\ref{lubm_q3}のLUBMのクエリ３を再現する。}
+	\label{sibm_q3}
+\end{figure}
+
+\begin{figure}[h!]
+	\lstinputlisting{./queries/lubm_q4.rq}
+	\caption{LUBMのクエリ４}
+	\label{lubm_q4}
+\end{figure}
+
+\begin{figure}[h!]
+	\lstinputlisting{./queries/lubm_insp_q4.rq}
+	\caption{
+	人の個人情報に対するクエリである。図\ref{lubm_q4}のLUBMのクエリ４を再現する。}
+	\label{sibm_q4}
+\end{figure}
+
+\begin{figure}[h!]
+	\lstinputlisting{./queries/lubm_q6.rq}
+	\caption{LUBMのクエリ６}
+	\label{lubm_q6}
+\end{figure}
+
+\begin{figure}[h!]
+	\lstinputlisting{./queries/lubm_insp_q6.rq}
+	\caption{
+	避難場所の関係者のタイプに関するクエリである。「ボランティア」である人を検索する。
+	図\ref{lubm_q6}のLUBMのクエリ６を再現する。}
+	\label{sibm_q6}
+\end{figure}
+
+\begin{figure}[h!]
+	\lstinputlisting{./queries/lubm_q7.rq}
+	\caption{LUBMのクエリ7}
+	\label{lubm_q7}
+\end{figure}
+
+\begin{figure}[h!]
+	\lstinputlisting{./queries/lubm_insp_q7.rq}
+	\caption{
+	クエリ６の拡張であり、さらに複雑な検索クエリである。
+	図\ref{lubm_q7}のLUBMのクエリ７を再現する。}
+	\label{sibm_q7}
+\end{figure}
+
+\section{実際の使用シナリオに対するクエリ}
+
+\begin{figure}[h!]
+	\lstinputlisting{./queries/select_label.rq}
+	\caption{ラベルが避難者の怪我の状態である。このクエリでは、避難者の状態を集約・分類するクエリである}
+	\label{sibm_q8}
+\end{figure}
+
+\begin{figure}[h!]
+	\lstinputlisting{./queries/select_age.rq}
+	\caption{年齢が６０より高い人数を検索するクエリである。実際に、避難者の年齢・性別などの情報を検索することが多い。}
+	\label{sibm_q9}
+\end{figure}
+
+\begin{figure}[h!]
+	\lstinputlisting{./queries/select_family.rq}
+	\caption{避難者の中に、病状がよくない人の家族情報を検索するクエリである。}
+	\label{sibm_q10}
+\end{figure}
+
+\begin{figure}[h!]
+	\lstinputlisting{./queries/select_gender_ext.rq}
+	\caption{避難者を性別で分類するクエリである。}
+	\label{sibm_q11}
+\end{figure}
+
+\begin{figure}[h!]
+	\lstinputlisting{./queries/select_storage.rq}
+	\caption{避難場所の備蓄状況を確認するクエリである。}
+	\label{sibm_q12}
+\end{figure}
+
+\begin{figure}[h!]
+	\lstinputlisting{./queries/select_school.rq}
+	\caption{小学生の家族の情報を検索するクエリである。実際に、親との連絡などよくあるクエリだと考えている。}
+	\label{sibm_q13}
+\end{figure}
