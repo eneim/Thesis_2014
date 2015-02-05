@@ -20,6 +20,8 @@
 \usepackage{listings}	% source code
 \usepackage{balance}
 \usepackage{txfonts}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
 \usepackage[deluxe]{otf}
 \usepackage{array}
 \newcolumntype{$}{>{\global\let\currentrowstyle\relax}}
@@ -67,7 +69,7 @@
 \職名A{教授}
 
 \指導教員名B{荒堀　喜貴}
-\職名B{准教授}
+\職名B{助教}
 
 %\所属学科{電気電子工学科}{}
 \所属学科{情報工学科}{}
@@ -91,14 +93,14 @@
 % 内容
 \setcounter{page}{1}
 \renewcommand{\thepage}{\arabic{page}}
-\input{introduction}
-\input{body-b}	%　避難場所の使用例
-\input{body-a}	%　前提知識
-\input{body-c}	%　関連研究
-\input{body-d}
-\input{body-e}
-\input{conclusion}
-%\input{acknowledgment}
+\input{introduction}	% 予論
+\input{body-a}	% 避難場所の使用例
+\input{body-c}	% 関連研究
+\input{body-b}	% 前提知識
+\input{body-d}	% SIBM
+\input{body-e}	% 実験・考察
+\input{conclusion}	% 結論・今後の課題
+\input{acknowledgment}
 \input{reference}
 \input{appendix}
 % ----------------------------------------------------------------------
